@@ -1,0 +1,73 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <title>Ares Dashboard</title>
+
+        <meta name="description" content="A futuristic dashboard by pixelcave. You can download it from https://pixelcave.com">
+        <meta name="author" content="pixelcave">
+        <meta name="robots" content="noindex, nofollow">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0">
+
+        <!-- Favicons (just the basics for now, check out http://realfavicongenerator.net/ for all available) -->
+        <link rel="shortcut icon" href="img/favicon.png">
+        <link rel="icon" type="image/png" href="img/favicon.png" sizes="32x32">
+
+        <!-- Web fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,600,700&Open+Sans:300,400,600,700">
+
+        <!-- Bootstrap and Ares CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">        <link rel="stylesheet" href="css/animate.min.css">
+        <link rel="stylesheet" href="css/ares.css">
+
+        <!-- Scripts -->
+        <script src="javascripts/core/jquery.min.js"></script>
+        <script src="javascripts/plugins/jquery.appear.min.js"></script>
+        <script src="javascripts/plugins/jquery.countTo.min.js"></script>
+        <script src="javascripts/plugins/jquery.easypiechart.min.js"></script>
+        <script src="javascripts/ares.js"></script>
+
+        <!-- Page JS Code -->
+        <script>
+            jQuery(function(){
+                // Init page helpers (Appear + CountTo + Easy Pie Chart plugins)
+                Ares.initHelpers(['appear', 'appear-countTo', 'easy-pie-chart']);
+            });
+        </script>
+    </head>
+
+    <div id="page-container" class="modern-sf">
+
+        {{#if error}}
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="sr-only">Close</span>
+                </button>
+                <strong>{{error}}</strong> {{message}}
+            </div>
+        {{/if}}
+
+        <!-- Header -->
+        <header id="page-header">
+            <div class="row">
+                <h1 class="col h3 font-w200">
+                    <span class="text-crystal">//</span> <a class="link-sf font-w300" href="/">Alwyn's 21st Birthday</a>
+                </h1>
+                <div class="col h3 text-right pull-right hidden-xs">
+                    <div class="font-w300">{{#if userName}}{{userName}}{{else}}NO_PLAYER_DETECTED{{/if}}</div>
+                    <div class="{{#ifCondition status "==" "LIVE"}}text-success{{else}}text-danger{{/ifCondition}} animated infinite pulse pull-right">[{{status}}]</div>
+                </div>
+            </div>
+        </header>
+        <!-- END Header -->
+
+        <body>
+            <div class="container-fluid m-0">
+                {{> _errorMsg}}
+                {{{body}}}
+            </div>
+        </body>
+    </div>
+
+</html>
