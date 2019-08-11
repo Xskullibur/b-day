@@ -13,7 +13,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-size: 13px;
     background-image: url(../img/bg_ares.jpg);
-    background-size: auto;
+    background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
