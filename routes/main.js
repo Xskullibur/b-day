@@ -1,5 +1,34 @@
 var express = require('express');
 var router = express.Router();
+var moment = require('moment')
+
+/**
+ * Data
+ */
+
+ const INFO = {
+    eventDate: moment('2019-09-27').format('Do MMMM YYYY'),
+    eventTime: '20:00 - 02:00',
+    eventVenue: 'Arcade Warehouse'
+ }
+
+const PLAYERS = [
+  "Joel", "Shawn", "Jonah", "Ryan", "James", "Tee Chin", "Damien", "Raphel", "Zheng Teck", "Chen Yee",
+  "Nat Sia", "Lionel", "Sam Fang", "Sam Lee", "Jolyn", "Yusuf", "Tudy", "Jedrick", "Le Cong", "Wenjing",
+  "Chia Feng", "Andrew", "Wen Qing", "Wen Hong", "Jing Sheng", "Lindy"
+]
+
+router.use((req, res, next) => {
+  if (req.user !== null || req.user !== undefined) {
+    next()
+  }
+  else{
+    res.render('login', {
+      error: 'Invalid Player...',
+      status: "UNAUTHORIZED"
+    })
+  }
+})
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -10,22 +39,24 @@ router.get('/', function(req, res, next) {
 
 router.post('/login', function(req, res) {
 
-  var userName
-  var status
+  if (req.body.passcode && PLAYERS.includes(req.body.passcode)) {
+    let userName = req.body.passcode
+    let status = "LIVE"
 
-  if (req.body.passcode) {
-    userName = req.body.passcode
-    status = "LIVE"    
+    res.render('index', {
+      userName,
+      status,
+      INFO,
+      PLAYERS
+    })
+
   }
   else{
-    userName = "UNKNOWN"
-    status = "UNAUTHORIZED"
+    res.render('login', {
+      error: "Invalid Player...",
+      status: "UNAUTHORIZED"
+    })
   }
-
-  res.render('index', {
-    userName,
-    status
-  })
 })
 
 module.exports = router;

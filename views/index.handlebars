@@ -3,7 +3,7 @@
 -->
 
 <!-- Main Content -->
-<main id="page-main" class="m-0"
+<main id="page-main" class="m-0">
     <!-- Columns -->
     <div class="row">
 
@@ -18,72 +18,38 @@
                 <div class="block-content overflow-hidden">
                     <div class="row items-push">
                         <div class="col-12 visibility-hidden" data-toggle="appear" data-class="animated fadeIn" data-timeout="300">
-                            <div class="font-s20 font-w300 text-white-op">
-                                <span class="fa fa-calendar-alt" aria-hidden="true"></span> Date: 27th September
+                            <div class="font-s20 font-w300 text-white-op col p-0">
+                                <span class="fa fa-calendar-alt" aria-hidden="true"></span> Date: 
+                            </div>
+                            <div class="font-s18 col p-0">
+                                {{INFO.eventDate}}
                             </div>
                         </div>
                         <div class="col-12 visibility-hidden" data-toggle="appear" data-class="animated fadeIn" data-timeout="300">
-                            <div class="font-s20 font-w300 text-white-op">
-                                <span class="fas fa-clock"></span> Time: 20:00 - 02:00
+                            <div class="font-s20 font-w300 text-white-op col p-0">
+                                <span class="fas fa-clock"></span> Time:
+                            </div>
+                            <div class="font-s18 col p-0">
+                                {{INFO.eventTime}}
                             </div>
                         </div>
                         <div class="col-12 visibility-hidden" data-toggle="appear" data-class="animated fadeIn" data-timeout="300">
-                            <div class="font-s20 font-w300 text-white-op">
-
-                                <div class="container">
-                                    <div id='map' style="height:200;"></div>
-                                </div>
-
+                            <div class="font-s20 font-w300 text-white-op col p-0">
+                                <span class="fas fa-map"></span> Venue: 
                             </div>
+                            <div class="font-s18 col p-0">
+                                <a href="https://goo.gl/maps/5bc5MviTP8fd6fYd8">{{INFO.eventVenue}}</a>
+                            </div>
+                        </div>
+
+                        <div class="col-12 visibility-hidden" data-toggle="appear" data-class="animated fadeIn" data-timeout="300">
+                            <div id='map' style="height:200;"></div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Environment -->
-            <div class="block">
-                <div class="block-header overflow-hidden">
-                    <h2 class="block-title visibility-hidden" data-toggle="appear" data-class="animated fadeInDown">Environment</h2>
-                </div>
-                <div class="block-content">
-                    <div class="row items-push overflow-hidden">
-                        <div class="col-xs-4 text-center visibility-hidden" data-toggle="appear" data-class="animated fadeInLeft" data-timeout="100">
-                            <div class="js-pie-chart pie-chart" data-percent="50" data-line-width="5" data-size="65" data-bar-color="rgba(255, 255, 255, .2)" data-track-color="rgba(255, 255, 255, .1)">
-                                <span class="font-s16 font-w600">PSI</span>
-                            </div>
-                        </div>
-                        <div class="col-xs-8 visibility-hidden" data-toggle="appear" data-class="animated fadeInRight" data-timeout="400">
-                            <div class="text-uppercase font-w600 text-white-op">Pressure</div>
-                            <div class="font-s36 font-w300">15.65</div>
-                        </div>
-                    </div>
-                    <div class="row items-push overflow-hidden">
-                        <div class="col-xs-4 text-center visibility-hidden" data-toggle="appear" data-class="animated fadeInLeft" data-timeout="200">
-                            <div class="js-pie-chart pie-chart" data-percent="29" data-line-width="5" data-size="65" data-bar-color="rgba(255, 255, 255, .2)" data-track-color="rgba(255, 255, 255, .1)">
-                                <span class="font-s16 font-w600">%</span>
-                            </div>
-                        </div>
-                        <div class="col-xs-8 visibility-hidden" data-toggle="appear" data-class="animated fadeInRight" data-timeout="500">
-                            <div class="text-uppercase font-w600 text-white-op">Oxygen</div>
-                            <div class="font-s36 font-w300">29.15</div>
-                        </div>
-                    </div>
-                    <div class="row items-push overflow-hidden">
-                        <div class="col-xs-4 text-center visibility-hidden" data-toggle="appear" data-class="animated fadeInLeft" data-timeout="300">
-                            <div class="js-pie-chart pie-chart" data-percent="60" data-line-width="5" data-size="65" data-bar-color="rgba(255, 255, 255, .2)" data-track-color="rgba(255, 255, 255, .1)">
-                                <span class="font-s16 font-w600">C&deg;</span>
-                            </div>
-                        </div>
-                        <div class="col-xs-8 visibility-hidden" data-toggle="appear" data-class="animated fadeInRight" data-timeout="600">
-                            <div class="text-uppercase font-w600 text-white-op">Temperature</div>
-                            <div class="font-s36 font-w300">5.3</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- END Environment -->
-
-            <!-- Planets -->
+            {{!-- <!-- Planets -->
             <div class="block">
                 <div class="block-header overflow-hidden">
                     <h2 class="block-title visibility-hidden" data-toggle="appear" data-class="animated fadeInDown">Planets</h2>
@@ -124,7 +90,7 @@
                     </div>
                 </div>
             </div>
-            <!-- END Planets -->
+            <!-- END Planets --> --}}
         </div>
         <!-- END Left Column -->
 
@@ -173,56 +139,69 @@
                     </div>
                 </div>
             </div>
-
-            <div class="row">
-                <div class="col-xs-6 visibility-hidden" data-toggle="appear" data-class="animated fadeInLeft" data-timeout="100">
-                    <button class="btn btn-xl btn-block btn-sf push-10">DATA_DRIVE</button>
-                </div>
-                <div class="col-xs-6 visibility-hidden" data-toggle="appear" data-class="animated fadeInRight" data-timeout="100">
-                    <button class="btn btn-xl btn-block btn-sf push-10">PO_DATABASE</button>
-                </div>
-                <div class="col-xs-6 visibility-hidden" data-toggle="appear" data-class="animated fadeInLeft" data-timeout="500">
-                    <button class="btn btn-xl btn-block btn-sf">ACTIVE_ROUTE</button>
-                </div>
-                <div class="col-xs-6 visibility-hidden" data-toggle="appear" data-class="animated fadeInRight" data-timeout="500">
-                    <button class="btn btn-xl btn-block btn-sf">AUTO_PILOT</button>
-                </div>
-            </div>
         </div>
         <!-- END Animated Circles Column -->
 
         <!-- Right Column -->
         <div class="col-sm-6 col-lg-3">
-            <!-- Players -->
+
+            <!-- Heart Rate Monitor -->
             <div class="block">
                 <div class="block-header overflow-hidden">
-                    <h2 class="block-title visibility-hidden text-secondary" data-toggle="appear" data-class="animated fadeInDown">Players:</h2>
+                    <h2 class="block-title visibility-hidden" data-toggle="appear" data-class="animated fadeInDown">Heart Rate</h2>
                 </div>
-                <div class="block-content overflow-hidden">
-                    <div class="row items-push">
-                        <div class="col visibility-hidden" data-toggle="appear" data-class="animated fadeIn" data-timeout="300">
-                            <div class="font-s14 font-w200 text-white-op">Player 1</div>
-                        </div>
-                        <div class="col visibility-hidden" data-toggle="appear" data-class="animated fadeIn" data-timeout="300">
-                            <div class="font-s14 font-w200 text-white-op">Player 1</div>
-                        </div>
-                        <div class="col visibility-hidden" data-toggle="appear" data-class="animated fadeIn" data-timeout="300">
-                            <div class="font-s14 font-w200 text-white-op">Player 1</div>
-                        </div>
-                        <div class="col visibility-hidden" data-toggle="appear" data-class="animated fadeIn" data-timeout="300">
-                            <div class="font-s14 font-w200 text-white-op">Player 1</div>
-                        </div>
-                        <div class="col visibility-hidden" data-toggle="appear" data-class="animated fadeIn" data-timeout="300">
-                            <div class="font-s14 font-w200 text-white-op">Player 1</div>
-                        </div>
-                        <div class="col visibility-hidden" data-toggle="appear" data-class="animated fadeIn" data-timeout="300">
-                            <div class="font-s14 font-w200 text-white-op">Player 1</div>
-                        </div>
+
+                <div class="block-content">
+                    <div class="row items-push overflow-hidden">
+                        {{> _heartbeat-monitor}}
                     </div>
                 </div>
             </div>
 
-            <!-- POS_TRACKING -->
+            <!-- Environment -->
+            <div class="block">
+                <div class="block-header overflow-hidden">
+                    <h2 class="block-title visibility-hidden" data-toggle="appear" data-class="animated fadeInDown">Environment</h2>
+                </div>
+                <div class="block-content">
+                    <div class="row items-push overflow-hidden">
+                        <div class="col-xs-4 text-center visibility-hidden" data-toggle="appear" data-class="animated fadeInLeft" data-timeout="100">
+                            <div class="js-pie-chart pie-chart" data-percent="50" data-line-width="5" data-size="65" data-bar-color="rgba(255, 255, 255, .2)" data-track-color="rgba(255, 255, 255, .1)">
+                                <span class="font-s16 font-w600">PSI</span>
+                            </div>
+                        </div>
+                        <div class="col-xs-8 visibility-hidden" data-toggle="appear" data-class="animated fadeInRight" data-timeout="400">
+                            <div class="text-uppercase font-w600 text-white-op">Pressure</div>
+                            <div class="font-s36 font-w300">15.65</div>
+                        </div>
+                    </div>
+                    <div class="row items-push overflow-hidden">
+                        <div class="col-xs-4 text-center visibility-hidden" data-toggle="appear" data-class="animated fadeInLeft" data-timeout="200">
+                            <div class="js-pie-chart pie-chart" data-percent="29" data-line-width="5" data-size="65" data-bar-color="rgba(255, 255, 255, .2)" data-track-color="rgba(255, 255, 255, .1)">
+                                <span class="font-s16 font-w600">%</span>
+                            </div>
+                        </div>
+                        <div class="col-xs-8 visibility-hidden" data-toggle="appear" data-class="animated fadeInRight" data-timeout="500">
+                            <div class="text-uppercase font-w600 text-white-op">Oxygen</div>
+                            <div class="font-s36 font-w300">29.15</div>
+                        </div>
+                    </div>
+                    <div class="row items-push overflow-hidden">
+                        <div class="col-xs-4 text-center visibility-hidden" data-toggle="appear" data-class="animated fadeInLeft" data-timeout="300">
+                            <div class="js-pie-chart pie-chart" data-percent="60" data-line-width="5" data-size="65" data-bar-color="rgba(255, 255, 255, .2)" data-track-color="rgba(255, 255, 255, .1)">
+                                <span class="font-s16 font-w600">C&deg;</span>
+                            </div>
+                        </div>
+                        <div class="col-xs-8 visibility-hidden" data-toggle="appear" data-class="animated fadeInRight" data-timeout="600">
+                            <div class="text-uppercase font-w600 text-white-op">Temperature</div>
+                            <div class="font-s36 font-w300">5.3</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END Environment -->
+
+            {{!-- <!-- POS_TRACKING -->
             <div class="block">
                 <div class="block-header overflow-hidden">
                     <h2 class="block-title visibility-hidden" data-toggle="appear" data-class="animated fadeInDown">POS_TRACKING</h2>
@@ -282,28 +261,39 @@
                     </div>
                 </div>
             </div>
-            <!-- END DATA_STREAM -->
+            <!-- END DATA_STREAM --> --}}
         </div>
         <!-- END Right Column -->
 
     </div>
     <!-- END Columns -->
 
-    <!-- Page Footer -->
-    <div class="block">
-        <div class="block-content block-content-full font-s12 text-center visibility-hidden" data-toggle="appear" data-class="animated fadeIn" data-timeout="1000">
-            2016 &copy; Crafted with <span class="text-success">&hearts;</span> by <a class="link-sf" href="https://pixelcave.com/">pixelcave</a>
+    <div class="row">
+        <div class="col-12">
+            <!-- Players -->
+            <div class="block">
+                <div class="block-header overflow-hidden">
+                    <h2 class="block-title visibility-hidden text-secondary" data-toggle="appear" data-class="animated fadeInDown">Players:</h2>
+                </div>
+                <div class="block-content overflow-hidden">
+                    <div class="row items-push justify-content-center">
+
+                        {{#each PLAYERS as |player|}}
+                            <div class="col-auto visibility-hidden" data-toggle="appear" data-class="animated fadeIn" data-timeout="100">
+                                <div class="font-s14 font-w200 text-white-op">{{player}}</div>
+                            </div>
+                        {{/each}}
+
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <!-- END Page Footer -->
-
 </main>
 <!-- END Main Content -->
 
 <script src="javascripts/countdown.js"></script>
-
-<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.2.0/mapbox-gl.js'></script>
-<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.2.0/mapbox-gl.css' rel='stylesheet' />
+<script src="javascripts/mapbox.js"></script>
 
 <style>
     .mapboxgl-popup {
@@ -311,80 +301,3 @@
         font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
     }
 </style>
-
-<script>
-    mapboxgl.accessToken = 'pk.eyJ1IjoiMTk0ODk3bCIsImEiOiJjanl5OG5jN3ExNXFlM2dtaTdsZGs2NXd2In0.VQ6svExqo8UDPJi0ZTvhWQ';
-    var map = new mapboxgl.Map({
-        container: 'map', // container id
-        style: 'mapbox://styles/194897l/cjz6gf9dt1tjj1cnvdtyxf7pd', // stylesheet location
-        center: [103.806413, 1.437925], // starting position [lng, lat]
-        zoom: 16 // starting zoom
-    });
-
-    map.addControl(new mapboxgl.NavigationControl());
-
-    map.on('load', function() {
-
-        map.loadImage("https://img.icons8.com/offices/16/000000/marker.png", function(error, image) {
-            if (error) throw error;
-            map.addImage("custom-marker", image);
-
-            map.addLayer({
-                "id": "places",
-                "type": "symbol",
-                "source": {
-                    "type": "geojson",
-                    "data": {
-                        "type": "FeatureCollection",
-                        "features": [{
-                            "type": "Feature",
-                            "properties": {
-                                "description": "<a href=\"https://goo.gl/maps/5bc5MviTP8fd6fYd8\" target=\"_blank\" title=\"Opens in a new window\">Target Location</a>",
-                                "icon": "custom-marker"
-                            },
-                            "geometry": {
-                                "type": "Point",
-                                "coordinates": [103.806413, 1.437925]
-                            }
-                        }]
-                    }
-                },
-                "layout": {
-                    "icon-image": "{icon}",
-                    "icon-allow-overlap": true
-                }
-            })
-        
-        })
-
-    })
-
-    // When a click event occurs on a feature in the places layer, open a popup at the
-    // location of the feature, with description HTML from its properties.
-    map.on('click', 'places', function (e) {
-            var coordinates = e.features[0].geometry.coordinates.slice();
-            var description = e.features[0].properties.description;
-            
-            // Ensure that if the map is zoomed out such that multiple
-            // copies of the feature are visible, the popup appears
-            // over the copy being pointed to.
-            while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-            coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-        }
-        
-        new mapboxgl.Popup()
-        .setLngLat(coordinates)
-        .setHTML(description)
-        .addTo(map);
-    });
-    
-    // Change the cursor to a pointer when the mouse is over the places layer.
-    map.on('mouseenter', 'places', function () {
-        map.getCanvas().style.cursor = 'pointer';
-    });
- 
-    // Change it back to a pointer when it leaves.
-    map.on('mouseleave', 'places', function () {
-        map.getCanvas().style.cursor = '';
-    });
-</script>

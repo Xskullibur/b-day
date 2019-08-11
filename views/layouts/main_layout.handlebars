@@ -21,6 +21,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">        
         <link rel="stylesheet" href="css/animate.min.css">
         <link rel="stylesheet" href="css/ares.css">
+        <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.2.0/mapbox-gl.css' rel='stylesheet' />
 
         <!-- Scripts -->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -30,6 +31,7 @@
         <script src="javascripts/plugins/jquery.easypiechart.min.js"></script>
         <script src="javascripts/ares.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.2.0/mapbox-gl.js'></script>
 
         <!-- Page JS Code -->
         <script>
@@ -59,19 +61,30 @@
                     <span class="text-crystal">//</span> <a class="link-sf font-w300" href="/">Alwyn's 21st Birthday</a>
                 </h1>
                 <div class="col h3 text-right pull-right hidden-xs">
-                    <div class="font-w300">{{#if userName}}{{userName}}{{else}}NO_PLAYER_DETECTED{{/if}}</div>
-                    <div class="{{#ifCondition status "==" "LIVE"}}text-success{{else}}text-danger{{/ifCondition}} animated infinite pulse pull-right">[{{status}}]</div>
+                    <div class="font-w300 col">{{#if userName}}{{userName}}{{else}}NO_PLAYER_DETECTED{{/if}}</div>
+                    <div class="{{#ifCondition status "==" "LIVE"}}text-success{{else}}text-danger{{/ifCondition}} animated infinite pulse pull-right col">[{{status}}]</div>
                 </div>
             </div>
         </header>
         <!-- END Header -->
 
+        <!-- Body -->
         <body>
             <div class="container-fluid m-0">
                 {{> _errorMsg}}
                 {{{body}}}
             </div>
         </body>
+        <!-- END Body -->
+
+        <!-- Page Footer -->
+        <div class="block">
+            <div class="block-content block-content-full font-s12 text-center visibility-hidden" data-toggle="appear" data-class="animated fadeIn" data-timeout="300">
+                2016 &copy; Crafted with <span class="text-success">&hearts;</span> by <a class="link-sf" href="https://pixelcave.com/">pixelcave</a><br>
+                Edited by Xskullibur
+            </div>
+        </div>
+        <!-- END Page Footer -->
     </div>
 
 </html>
