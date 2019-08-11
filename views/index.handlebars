@@ -9,6 +9,37 @@
 
         <!-- Left Column -->
         <div class="col-sm-6 col-lg-3 col-lg-pull-6">
+
+            {{!-- Details --}}
+            <div class="block">
+                <div class="block-header overflow-hidden">
+                    <h2 class="block-title visibility-hidden text-secondary" data-toggle="appear" data-class="animated fadeInDown">Mission Details:</h2>
+                </div>
+                <div class="block-content overflow-hidden">
+                    <div class="row items-push">
+                        <div class="col-12 visibility-hidden" data-toggle="appear" data-class="animated fadeIn" data-timeout="300">
+                            <div class="font-s20 font-w300 text-white-op">
+                                <span class="fa fa-calendar-alt" aria-hidden="true"></span> Date: 27th September
+                            </div>
+                        </div>
+                        <div class="col-12 visibility-hidden" data-toggle="appear" data-class="animated fadeIn" data-timeout="300">
+                            <div class="font-s20 font-w300 text-white-op">
+                                <span class="fas fa-clock"></span> Time: 20:00 - 02:00
+                            </div>
+                        </div>
+                        <div class="col-12 visibility-hidden" data-toggle="appear" data-class="animated fadeIn" data-timeout="300">
+                            <div class="font-s20 font-w300 text-white-op">
+
+                                <div class="container">
+                                    <div id='map' style="height:200;"></div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- Environment -->
             <div class="block">
                 <div class="block-header overflow-hidden">
@@ -162,7 +193,7 @@
 
         <!-- Right Column -->
         <div class="col-sm-6 col-lg-3">
-            <!-- HQ_COMS -->
+            <!-- Players -->
             <div class="block">
                 <div class="block-header overflow-hidden">
                     <h2 class="block-title visibility-hidden text-secondary" data-toggle="appear" data-class="animated fadeInDown">Players:</h2>
@@ -170,27 +201,26 @@
                 <div class="block-content overflow-hidden">
                     <div class="row items-push">
                         <div class="col visibility-hidden" data-toggle="appear" data-class="animated fadeIn" data-timeout="300">
-                            <div class="font-s24 font-w300 text-white-op">Player 1</div>
+                            <div class="font-s14 font-w200 text-white-op">Player 1</div>
                         </div>
                         <div class="col visibility-hidden" data-toggle="appear" data-class="animated fadeIn" data-timeout="300">
-                            <div class="font-s24 font-w300 text-white-op">Player 1</div>
+                            <div class="font-s14 font-w200 text-white-op">Player 1</div>
                         </div>
                         <div class="col visibility-hidden" data-toggle="appear" data-class="animated fadeIn" data-timeout="300">
-                            <div class="font-s24 font-w300 text-white-op">Player 1</div>
+                            <div class="font-s14 font-w200 text-white-op">Player 1</div>
                         </div>
                         <div class="col visibility-hidden" data-toggle="appear" data-class="animated fadeIn" data-timeout="300">
-                            <div class="font-s24 font-w300 text-white-op">Player 1</div>
+                            <div class="font-s14 font-w200 text-white-op">Player 1</div>
                         </div>
                         <div class="col visibility-hidden" data-toggle="appear" data-class="animated fadeIn" data-timeout="300">
-                            <div class="font-s24 font-w300 text-white-op">Player 1</div>
+                            <div class="font-s14 font-w200 text-white-op">Player 1</div>
                         </div>
                         <div class="col visibility-hidden" data-toggle="appear" data-class="animated fadeIn" data-timeout="300">
-                            <div class="font-s24 font-w300 text-white-op">Player 1</div>
+                            <div class="font-s14 font-w200 text-white-op">Player 1</div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- END HQ_COMS -->
 
             <!-- POS_TRACKING -->
             <div class="block">
@@ -266,7 +296,20 @@
         </div>
     </div>
     <!-- END Page Footer -->
+
 </main>
 <!-- END Main Content -->
 
 <script src="javascripts/countdown.js"></script>
+
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.2.0/mapbox-gl.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.2.0/mapbox-gl.css' rel='stylesheet' />
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiMTk0ODk3bCIsImEiOiJjanl5OG5jN3ExNXFlM2dtaTdsZGs2NXd2In0.VQ6svExqo8UDPJi0ZTvhWQ';
+    var map = new mapboxgl.Map({
+        container: 'map', // container id
+        style: 'mapbox://styles/mapbox/light-v10', // stylesheet location
+        center: [-74.50, 40], // starting position [lng, lat]
+        zoom: 9 // starting zoom
+    });
+</script>
